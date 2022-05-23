@@ -1,0 +1,343 @@
+@import 'blocks/title.sass'
+
+// Пришлось подключать Тахому руками, нашёл только 400 
+@font-face
+    font-family: 'Tahoma';
+    src: url('../fonts/tahoma.ttf');
+    font-weight: 400
+    font-style: normal
+
+// Кнопки 
+.btn
+    background: #F26689
+    border-radius: 3px
+    font-family: 'Roboto Condensed'
+    font-weight: 700
+    text-transform: uppercase
+    color: #FFFFFF
+    padding: 20px 22px
+    line-height: 5px
+
+// Анимация для табов
+.hide
+    display: none
+
+.show
+    display: block
+
+.fade 
+    animation-name: fade
+    animation-duration: 1.5s
+
+
+@keyframes fade 
+    from 
+        opacity: 0.1
+    
+    to 
+        opacity: 1
+
+.promo
+    min-height: 737px
+    padding: 44px 0 120px 0
+    background: linear-gradient(82.97deg, rgba(0, 0, 0, 0.46) 22.14%, rgba(0, 0, 0, 0) 81.34%), url('../images/promo.png') no-repeat 100%/cover
+    &__logo
+        width: 289px
+        height: 73px
+        &__img
+            width: 75px
+            height: 73px
+        &__text
+            padding-left: 26px
+            &__title
+               line-height: 1
+            &__subtitle
+                line-height: 1
+                font-family: 'Tahoma'
+                font-size: 20px
+                color: #FFFFFF
+                text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5)
+    &__phone
+        text-decoration: none
+    &__title
+        margin-top: 147px
+        max-width: 743px
+        text-transform: uppercase
+    &__subtitle
+        max-width: 556.73px
+        font-family: 'Tahoma'
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: #FFFFFF
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5)
+    &__btn
+        margin-top: 74px
+
+.house-types
+    min-height: 546px
+    background: linear-gradient(to bottom, #9D62DD 58%, #ffffff 42%)
+    padding: 88px 0 93px 0
+    &__title
+        text-transform: uppercase
+    &__subtitle
+        font-family: 'Tahoma'
+        font-weight: 400
+        font-size: 16px
+        color: #FFFFFF
+    &__block
+        margin-top: 61px
+        max-width: 246px
+        &__circle
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 166px
+            height: 166px
+            overflow: hidden
+            border-radius: 100%
+            transition: all 0.6s
+        &__descr
+            margin-top: 39px
+            font-family: 'Tahoma'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            color: #6C6577
+            transition: all 0.3s
+        &:hover
+            .house-types__block__circle
+                border: solid 8px #F26689
+            .house-types__block__descr
+                font-weight: 700
+
+.window-types
+    min-height: 1180px
+    padding-bottom: 107px
+    &__card
+        padding: 80px
+        border-radius: 10px
+        &_mini
+            max-width: 642px
+        &__price
+            font-family: 'Roboto Condensed'
+            font-weight: 400
+            font-size: 24px
+            color: #FFFFFF
+            span
+                font-weight: 700
+                font-size: 48px
+                color: #DF59CA
+        &__descr
+            max-width: 393.68px
+            font-family: 'Tahoma'
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            color: #FFFFFF
+        &__btn
+            margin-top: 44px
+    &__card.first
+        background: linear-gradient(78.6deg, rgba(50, 34, 67, 0.8) 27.75%, rgba(50, 34, 67, 0) 96.1%), url('../images/bg1.png') no-repeat 100%/cover
+    &__card.second
+        background: linear-gradient(78.6deg, rgba(50, 34, 67, 0.8) 27.75%, rgba(50, 34, 67, 0) 96.1%), url('../images/bg2.png') no-repeat 100%/cover
+    &__card.third
+        background: linear-gradient(78.6deg, rgba(50, 34, 67, 0.8) 27.75%, rgba(50, 34, 67, 0) 96.1%), url('../images/bg3.png') no-repeat 100%/cover
+
+.calculation
+    min-height: 626px
+    padding-bottom: 73px
+    &__main
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        height: 426px
+        padding: 0 56px 0 70px
+        position: relative
+        &__text
+            max-width: 540px
+            margin-top: 63px
+            &__title
+                line-height: 52px
+            &__descr
+                margin-top: 17px
+                font-family: 'Roboto Condensed'
+                font-weight: 400
+                font-size: 28px
+                line-height: 33px
+                color: #5B5B5B
+            &__btn
+                margin-top: 45px
+        &__img
+            position: absolute
+            right: 36px
+            top: -41px
+    &__notification
+        font-family: 'Roboto Condensed'
+        font-weight: 700
+        font-size: 34px
+        line-height: 40px
+        color: #5B5B5B
+        span
+            color: #9D62DD
+
+.forms
+    background: #9D62DD
+    min-height: 769px
+    padding: 85px 0
+    &__title
+        text-transform: uppercase
+    &__main
+        margin-top: 23px
+        max-width: 910px
+        &__block
+            &__img
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 230px
+                height: 230px
+            &__descr
+                font-family: 'Tahoma'
+                font-weight: 700
+                font-size: 16px
+                line-height: 19px
+                color: #FFFFFF
+
+.products
+    min-height: 1450px
+    &__title
+        text-transform: uppercase
+        margin-top: 70px
+    &__tabs
+        margin-top: 34px
+        &__btns
+            &__btn
+                background: #F6F1FC
+                padding: 12px 30px
+                border: 1px solid #9D62DD
+                border-radius: 29px
+                font-family: 'Roboto Condensed'
+                font-weight: 400
+                font-size: 15px
+                line-height: 18px
+                text-align: center
+                color: #9862D3
+                transition: all 0.6s
+            &__btn.active
+                background: #9D62DD
+                color: #FFFFFF
+        &__content
+            margin-top: 109px
+            &__title
+                font-family: 'Roboto Condensed'
+                font-weight: 400
+                font-size: 24px
+                line-height: 28px
+                text-transform: uppercase
+                color: #9D62DD
+            &__descr
+                margin-top: 41px
+                font-family: 'Roboto Condensed'
+                font-weight: 400
+                font-size: 18px
+                line-height: 26px
+                color: #5B5B5B
+                list-style: none
+                &__item
+                    margin-top: 19px
+                    position: relative
+                    &::before
+                        position: absolute
+                        content: ''
+                        width: 9.3px
+                        height: 9.3px
+                        background: #9D62DD
+                        border-radius: 100%
+                        top: 9px
+                        left: -30px
+            &__btn
+                margin-top: 53px
+        &__text
+            max-width: 406px
+    &__fittings
+        &__subtitle
+            font-family: 'Roboto Condensed'
+            font-weight: 400
+            font-size: 18px
+            line-height: 26px
+            color: #5B5B5B
+        &__img
+            max-width: 442px
+        &__descr
+            font-family: 'Roboto Condensed'
+            font-weight: 400
+            font-size: 18px
+            line-height: 26px
+            color: #5B5B5B
+            list-style: none
+            &__item
+                margin-top: 19px
+                position: relative
+                &::before
+                    position: absolute
+                    content: ''
+                    width: 9.3px
+                    height: 9.3px
+                    background: #9D62DD
+                    border-radius: 100%
+                    top: 9px
+                    left: -30px
+
+// Медиа Правила
+@media (max-width: 1439px)
+    .window-types__card_mini
+        width: 552px
+    .calculation__main__img
+        right: 109px
+
+@media (max-width: 1200px)
+    .window-types__card_mini
+        width: 547px
+    .calculation__main__img
+        right: 36px
+        top: 13px
+        img
+            width: 423px
+
+@media (max-width: 992px)
+    .calculation__main__img
+        right: 36px
+        top: 13px
+        img
+            width: 423px
+
+@media (max-width: 576px)
+    .promo__phone
+        font-size: 40px
+    .promo__title
+        font-size: 49px
+    .house-types
+        background: linear-gradient(to bottom, #9D62DD 42%, #fff 42%)
+    .title_fz48
+        font-size: 36px
+    .window-types__card
+        padding: 30px
+        width: 100%
+    .products__fittings__img__main
+        width: 100%
+    .products__tabs__content
+        img
+            width: 100%
+    .calculation__main__text
+        margin-top: 4px
+        width: 100%
+        &__title
+            font-size: 35px
+            line-height: 40px
+        &__descr
+            font-size: 25px
+            line-height: 28px
+        &__btn
+            font-size: 13px
+    .calculation__notification
+        font-size: 25px
